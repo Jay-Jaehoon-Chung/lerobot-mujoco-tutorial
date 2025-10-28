@@ -31,6 +31,24 @@ cd asset/objaverse
 unzip plate_11.zip
 ```
 
+### Troubleshooting
+
+**XML Error: resource not found**
+
+If you encounter this error when running the notebooks:
+```
+ValueError: XML Error: resource not found via provider or OS filesystem:
+'./asset/objaverse/plate_11/model_new.xml'
+```
+
+Make sure you've extracted the asset files:
+```bash
+cd asset/objaverse
+unzip plate_11.zip
+```
+
+The `plate_11/` directory is excluded from git (see `.gitignore`) and must be extracted manually after cloning.
+
 ### Updates & Plans
 
 :white_check_mark: Viewer Update.
@@ -255,7 +273,8 @@ wandb:
 
 - [train_model.py](train_model.py): Training script
 - [smolvla_omy.yaml](smolvla_omy.yaml): Training configuration file
-- [8.smolvla.ipynb](8.smolvla.ipynb): Policy deployment
+- [8.smolvla.ipynb](8.smolvla.ipynb): Policy deployment (custom dataset)
+- [8-1.smolvla_customized.ipynb](8-1.smolvla_customized.ipynb): Deploy pretrained SmolVLA model with LIBERO dataset
 
 
 
